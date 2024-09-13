@@ -3,7 +3,10 @@ const params = new URLSearchParams(document.location.search);
 const raum = params.get("raum");
 const year = new Date().getFullYear();
 const kw = new Date().getWeek();
-console.info(raum+"-"+jahr+"-"+kw);
+console.info(raum+": "+kw+"-"+year);
+
+window.location.replace("https://lsf.hhu.de/qisserver/rds?state=wplan&act=Raum&pool=Raum&show=plan&P.vx=kurz&raum.rgid="+raum+"&week="+kw+"_"+year);  
+  
 
 // This script is released to the public domain and may be used, modified and
 // distributed without restrictions. Attribution not necessary but appreciated.
