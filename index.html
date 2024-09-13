@@ -1,13 +1,4 @@
 <script>
-const params = new URLSearchParams(document.location.search);
-const raum = params.get("raum");
-const year = new Date().getFullYear();
-const kw = new Date().getWeek();
-console.info(raum+": "+kw+"-"+year);
-
-window.location.replace("https://lsf.hhu.de/qisserver/rds?state=wplan&act=Raum&pool=Raum&show=plan&P.vx=kurz&raum.rgid="+raum+"&week="+kw+"_"+year);  
-  
-
 // This script is released to the public domain and may be used, modified and
 // distributed without restrictions. Attribution not necessary but appreciated.
 // Source: https://weeknumber.com/how-to/javascript
@@ -31,4 +22,12 @@ Date.prototype.getWeekYear = function() {
   date.setDate(date.getDate() + 3 - (date.getDay() + 6) % 7);
   return date.getFullYear();
 }
+  
+const params = new URLSearchParams(document.location.search);
+const raum = params.get("raum");
+const year = new Date().getWeekYear();
+const kw = new Date().getWeek();
+console.info(raum+": "+kw+"-"+year);
+
+window.location.replace("https://lsf.hhu.de/qisserver/rds?state=wplan&act=Raum&pool=Raum&show=plan&P.vx=kurz&raum.rgid="+raum+"&week="+kw+"_"+year);  
 </script>
