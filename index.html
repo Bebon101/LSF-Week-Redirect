@@ -26,7 +26,7 @@ getWeekYear = function() {
 const params = new URLSearchParams(document.location.search);
 const raum = params.get("raum");
 const year = getWeekYear();
-const kw = getWeek()+1;
+const kw = getWeek();
   
 window.location.replace("https://lsf.hhu.de/qisserver/rds?state=wplan&act=Raum&pool=Raum&show=plan&P.vx=kurz&raum.rgid="+raum+"&week="+kw+"_"+year);  
 </script>
