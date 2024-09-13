@@ -1,7 +1,7 @@
 <script>
 const params = new URLSearchParams(document.location.search);
-const s = params.get("s");
-const o = params.get("o");
-console.info(s); //show C
-console.info(o); //show 1
+const raum = params.get("raum");
+const year = new Date().getFullYear();
+const kw = new Date().getWeekNumber();
+console.info(raum+"-"+jahr+"-"+kw);
 </script>
