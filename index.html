@@ -1,1 +1,6 @@
-Hello World!
+<script>
+const params = new URLSearchParams(window.location.search); //parse params
+const q = params.get("q"); //get q param
+document.getElementbyid("intense").value = q; 
+retrun q;
+</script>
