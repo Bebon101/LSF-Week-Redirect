@@ -4,8 +4,8 @@
 // Source: https://weeknumber.com/how-to/javascript
 
 // Returns the ISO week of the date.
-Date.prototype.getWeek = function() {
-  var date = new Date(this.getTime());
+getWeek = function() {
+  var date = new Date.now();
   date.setHours(0, 0, 0, 0);
   // Thursday in current week decides the year.
   date.setDate(date.getDate() + 3 - (date.getDay() + 6) % 7);
@@ -17,8 +17,8 @@ Date.prototype.getWeek = function() {
 }
 
 // Returns the four-digit year corresponding to the ISO week of the date.
-Date.prototype.getWeekYear = function() {
-  var date = new Date(this.getTime());
+getWeekYear = function() {
+  var date = new Date.now();
   date.setDate(date.getDate() + 3 - (date.getDay() + 6) % 7);
   return date.getFullYear();
 }
