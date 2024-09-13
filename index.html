@@ -1,6 +1,7 @@
 <script>
-const params = new URLSearchParams(window.location.search); //parse params
-const q = params.get("q"); //get q param
-document.getElementbyid("intense").value = q; 
-retrun q;
+const params = new URLSearchParams(document.location.search);
+const s = params.get("s");
+const o = params.get("o");
+console.info(s); //show C
+console.info(o); //show 1
 </script>
